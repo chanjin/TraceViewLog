@@ -1,0 +1,21 @@
+digraph SPHG { 
+node [shape=plaintext, fontname=Skia, fontsize=20];
+edge [fontname=Skia, fontsize = 10];
+8[ label="raceview"];
+7[ label="equitur"];
+6[ label="raph"];
+5[ label="nalysis"];
+4[ label=""];
+3[ label="roject"];
+2[ label="eqdiagram"];
+1[ label="til"];
+0[ label="xperiments"];
+4->8[color="black", arrowhead="vee", label = ""];
+4->7[color="black", arrowhead="vee", label = ""];
+4->6[color="black", arrowhead="vee", label = ""];
+4->5[color="black", arrowhead="vee", label = ""];
+4->3[color="black", arrowhead="vee", label = ""];
+4->2[color="black", arrowhead="vee", label = ""];
+4->1[color="black", arrowhead="vee", label = ""];
+4->0[color="black", arrowhead="vee", label = ""]
+}

@@ -1,0 +1,7 @@
+digraph AppCallGraph_thread_23 { 
+	node [shape=box, fillcolor=white, fontname=GillSans, fontsize=13];
+1[ label="OTHERs"];
+0[ label="SNS_Newbay"];
+	edge [fontname=GillSans, fontsize=9];
+0->1 [label="0"]
+}

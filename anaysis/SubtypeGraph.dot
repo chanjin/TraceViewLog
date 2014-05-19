@@ -1,0 +1,44 @@
+digraph SubtypeGraph { 
+node [shape=plaintext, fontname=Skia, fontsize=20];
+edge [fontname=Skia, fontsize = 10];
+22[ label="equitur.Terminal"];
+21[ label="raceview.ProfileData"];
+20[ label="raph.DepEdge"];
+19[ label="raph.MethodNode"];
+18[ label="raph.NodeElem"];
+17[ label="raceview.DmTraceReader"];
+16[ label="raph.MethodCallGraph"];
+15[ label="raph.MethodCallEdge"];
+14[ label="roject.SNSRefreshTweet$"];
+13[ label="raph.PackageNode"];
+12[ label="raph.ModuleStructure"];
+11[ label="roject.SNSLogin$"];
+10[ label="raph.ModuleNode"];
+9[ label="equitur.Symbol"];
+8[ label="roject.SNSMakeTweet$"];
+7[ label="raph.ClassNode"];
+6[ label="roject.SNSLogout$"];
+5[ label="equitur.Guard"];
+4[ label="raceview.ProfileSelf"];
+3[ label="raceview.TraceReader"];
+2[ label="raph.DependencyGraph"];
+1[ label="equitur.NonTerminal"];
+0[ label="roject.Scenario"];
+5->9[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+1->9[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+4->21[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+22->9[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+17->3[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+14->0[color="red",  arrowhead="odot", style="dotted", label = "P,S,C,O"];
+8->0[color="red",  arrowhead="odot", style="dotted", label = "P,S,C,O"];
+11->0[color="red",  arrowhead="odot", style="dotted", label = "P,S,C,O"];
+6->0[color="red",  arrowhead="odot", style="dotted", label = "P,S,C,O"];
+10->18[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+12->16[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+12->2[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+13->7[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+13->18[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+15->20[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+19->18[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"];
+7->18[color="red",  arrowhead="odot", style="dotted", label = "S,C,O"]
+}

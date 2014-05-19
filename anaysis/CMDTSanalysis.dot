@@ -1,0 +1,9 @@
+digraph CMDTSanalysis { 
+node [shape=plaintext, fontname=Skia, fontsize=20];
+edge [fontname=Skia, fontsize = 10];
+18[ label="TraceLogAnalysis(2)"];
+14[ label="TraceLogAnalysisSCC(2)"];
+11[ label="CallAnalysisThreadWise(2)"];
+18->11[color="black", arrowhead="vee", label = "S,C"];
+14->18[color="black", arrowhead="vee", label = "S,C"];
+}
