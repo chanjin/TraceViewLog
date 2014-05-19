@@ -1,0 +1,104 @@
+alias {
+	app : ANDROID_APP
+	database : DATABASE
+	view : ANDROID_VIEW
+	android : ANDROID
+	network : NETWORK
+	os : ANDROID_OS
+	lib : LIB
+	test : TEST
+	java : JAVA
+	sns : SNS
+	dalvik : DALBIK
+	apache : APACHE
+}
+
+alias {
+	sns: SNS
+	sns_newbay: SNS_Newbay
+	sns_account:  SNS_Account
+	sns_common : SNS_Common
+	sns_feed : SNS_Feed
+	sns_profile : SNS_Profile
+	sns_setting : SNS_Setting
+	sns_util : SNS_Util
+	sns_otherlib : OTHERs
+}
+
+
+mapping components {
+	android ("android") 
+	sns ("com/lge")
+	lib ("com/android" "com/google" "com/ibm" "com/jayway" "sun" "org")
+	dalvik ("dalvik"  "java")
+}
+
+mapping layers {
+	app 			("android/app" "android/content") 
+	database 	("android/database") 
+	view		 	("android/graphics")
+	android 		("android/media")
+	network 	("android/net" "org/apache/http" )
+	database 	("android/server/data")
+	lib 				("android/test" "android/util" "org/apache/commons" "org/apache/harmony" "org/bouncycastle" 
+						"org/kxml2/io" "org/openssl" "org/xmlpull/v1" "sun/misc" "android/provider" "com/google/android/collect")
+	view 			("android/text" "android/view" "android/widget")
+	os 				( "android/os" "com/android/internal" "com/ibm/icu4jni" "dalvik/system" ) 
+	sns 				("com/lge" "com/jayway/android/robotium/solo")
+	java 			("java")
+}
+
+
+mapping sns {
+	android 			( "android/app" "android/content"  "android/database"  "android/graphics"  "android/media" 
+								"android/net"  "android/os"  "android/server/data"  "android/provider" "android/test" 
+								"android/text" "android/util"  "android/view"  "android/widget"  "com/android/internal"  
+								"com/google/android/collect" "dalvik/system" )
+	test ("com/jayway/android/robotium/solo")
+	sns_feed ("com/lge/feed" "com/lge/sns/feed" )
+	sns_newbay ("com/lge/newbay")
+	sns ( "com/lge/sns")
+	sns_account ("com/lge/sns/account")  
+	sns_common ("com/lge/sns/common") 
+	sns_profile ("com/lge/sns/profile") 
+	sns_setting ("com/lge/sns/setting/linkbook")
+	sns_util ("com/lge/util")
+	java ("java")
+	apache ("org/apache")
+	sns_otherlib ( "com/ibm/icu4jni" "org/bouncycastle" "org/kxml2/io" "org/openssl" "org/xmlpull/v1" "sun/misc" )
+}
+			
+mapping packagearch {
+	"android" -> "android" 
+	"com/android" -> "com.android" 
+	"com/google" -> "com.google" 
+	"com/ibm/icu4jni" -> "com.ibm.icu4jni" 
+	"com/jayway" -> "com.jayway" 
+	"com/lge" -> "com.lge" 
+	"dalvik" -> "dalvik" 
+	"java" -> "java"
+	"org/apache/common" -> "org.apache.common" 
+	"org/apache/harmony"->"org.apache.harmony" 
+	"org/apache/http" -> "org.apache.http" 
+	"org/bouncycastle" -> "org.bouncycastle" 
+	"org/kxml2/io" -> "org.kxml2.io" 
+	"org/openssl" -> "org.openssl" 
+	"org/xmlpull" -> "org.xmlpull" 
+	"sun" -> "sun"
+}
+	
+mapping snsonly {
+	sns_otherlib 		( "android" "com/android/internal" "com/google/android/collect" "com/ibm/icu4jni" "dalvik/system" "java" 
+										"org/apache" "org/bouncycastle" "org/kxml2/io" "org/openssl" "org/xmlpull/v1" "sun/misc")
+	test ("com/jayway/android/robotium/solo")
+	sns_feed ( "com/lge/feed" )
+	sns_newbay ("com/lge/newbay")
+	sns ( "com/lge/sns" ) 
+	sns_account ("com/lge/sns/account")  
+	sns_common ( "com/lge/sns/common") 
+	sns_feed  ("com/lge/sns/feed") 
+	sns_profile ("com/lge/sns/profile")
+	sns_setting ("com/lge/sns/setting/linkbook") 
+	sns_util ("com/lge/util") 
+
+}
